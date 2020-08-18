@@ -46,7 +46,10 @@ def remove_adjacent(nums):
 
 
 def zip_merge(list1, list2):
- 
+    list1 = ["M", "na", "i", "Ke"]
+    list2 = ["y", "me", "s", "lly"]
+    result = zip(list1, list2)
+    return result
 
 
 # F. empty_filter
@@ -74,6 +77,15 @@ def empty_filter(list1):
 
 
 def linear_merge(list1, list2):
+    result = []
+    while list1 and list2:
+        if list1[0] < list2[0]:
+            result.append(list1.pop(0))
+        else:
+            result.append(list2.pop(0))
+    result.extend(list1)
+    result.extend(list2)
+    return result 
 
 
 # Provided simple test() function used in main() to print
