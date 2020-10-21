@@ -26,8 +26,8 @@ __author__ = 'Tyrell Williams'
 
 
 def match_ends(words):
-    count = 0 
-    for word in words: 
+    count = 0
+    for word in words:
         if len(word) > 1 and word[0] == word[-1]:
             count += 1
     return count
@@ -45,7 +45,7 @@ def match_ends(words):
 
 
 def front_x(words):
-    x_list = [] 
+    x_list = []
     other_list = []
     for word in words:
         if word.startswith('x'):
@@ -53,7 +53,6 @@ def front_x(words):
         else:
             other_list.append(word)
     return sorted(x_list) + sorted(other_list)
-
 
 
 # C. sort_last
@@ -65,13 +64,12 @@ def front_x(words):
 # Hint: use a custom key= function to extract the last element from each tuple.
 
 
-def last (t):
+def last(t):
     return t[-1]
 
 
 def sort_last(tuples):
     return sorted(tuples, key=last)
-
 
 
 # Provided simple test() function used in main() to print
